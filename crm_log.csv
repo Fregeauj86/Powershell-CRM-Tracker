@@ -1,0 +1,4 @@
+CaseID,Timestamp,ClientName,IssueType,IssueDescription,ResolutionStatus
+18474a4e-b258-47f9-8b31-3ebfcac22422,2025-06-23 22:49:45,John,Tech,"Zoom won't open","Open"
+aeff3636-e99a-43e7-b3f2-c12e9e6ecd58,2025-06-23 22:57:28,Robert Lang,Scheduling,"Misunderstanding, cannot make it on Tuesday June 22, 2025","Resolved"
+4040c64c-4601-48c7-a32f-78c716aaaffa,2025-06-23 22:59:27,Jake,Curriculum,"Needs ABC123 Standards","Pending"
