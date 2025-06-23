@@ -7,7 +7,20 @@ if (-not (Test-Path $logFile)) {
 }
 
 # Generate unique case ID
-$caseID = [guid]::NewGuid().ToString()
+# Path to store the last case number
+$counterFile = "C:\JOHNSKI\CRM\case_counter.txt"
+
+# Create file if it doesn't exist
+if (-not (Test-Path $counterFile)) {
+    Set-Content -Path $counterFile -Value 0
+}
+
+# Read and increment the last case number
+$lastNumber = Get-Content $counterFile
+$caseID = "{0:D4}" -f ([int]$lastNumber + 1)
+
+# Save the new number back to the file
+Set-Content -Path $counterFile -Value $caseID
 
 # Prompt for case details
 $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
